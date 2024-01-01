@@ -7,7 +7,7 @@ export default function useCategory() {
   //get cat
   const getCategories = async () => {
     try {
-      const { data } = await axios.get("https://techmart-api.vercel.app/api/get-category");
+      const { data } = await axios.get("https://localhost-5000/api/get-category");
       setCategories(data?.category);
     } catch (error) {
       console.log(error);

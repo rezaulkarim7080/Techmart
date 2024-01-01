@@ -22,7 +22,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `https://techmart-api.vercel.app/api/get-product/${params.slug}`
+        `https://localhost-5000/api/get-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
@@ -34,7 +34,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `https://techmart-api.vercel.app/api/related-product/${pid}/${cid}`
+        `https://localhost-5000/api/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {

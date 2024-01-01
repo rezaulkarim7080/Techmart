@@ -56,7 +56,7 @@ const CartPage = () => {
   //get payment gateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get("https://techmart-api.vercel.app/api/braintree/token");
+      const { data } = await axios.get("https://localhost-5000/api/braintree/token");
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -73,7 +73,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("https://techmart-api.vercel.app/api/braintree/payment", {
+      const { data } = await axios.post("https://localhost-5000/api/braintree/payment", {
         nonce,
         cart,
       });

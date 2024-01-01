@@ -20,7 +20,7 @@ const CreateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://techmart-api.vercel.app/api/get-category");
+      const { data } = await axios.get("https://localhost-5000/api/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -38,7 +38,7 @@ const CreateProduct = () => {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://techmart-api.vercel.app/api/create-product", {
+      const res = await axios.post("https://localhost-5000/api/create-product", {
         name,
         description,
         price,

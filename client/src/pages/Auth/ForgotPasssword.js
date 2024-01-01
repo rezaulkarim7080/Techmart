@@ -14,7 +14,7 @@ const ForgotPasssword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://techmart-api.vercel.app/api/forgot-password", {
+      const res = await axios.post("https://localhost-5000/api/forgot-password", {
         email,
         newPassword,
 

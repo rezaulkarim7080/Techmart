@@ -26,7 +26,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put("https://techmart-api.vercel.app/api/profile", {
+      const { data } = await axios.put("https://localhost-5000/api/profile", {
         name,
         email,
         password,
