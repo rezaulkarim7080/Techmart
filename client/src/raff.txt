@@ -1,0 +1,18 @@
+<div
+          className={` z-10 bg-gray-400 h-[20%] w-[30%] rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-5 ${
+            darkMode && "hover:shadow-2xl hover:shadow-[#000000]"
+          }`}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            alt="image"
+            width={200}
+            className=""
+          />
+          <h1 className="text-3xl font-semibold">Miral Suthar</h1>
+          <h1>
+            Hello, I am Frontend Developer from India and this is tailwindcss
+            glassmorphism
+          </h1>
+          <button className="btn">Click me</button>
+        </div>

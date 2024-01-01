@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #ffffff;
+} */
+
+/* .dark {
+  @apply bg-[#1a1a1a] text-[#e4e4e4];
+} */
+.dark {
+  color: #f7f7f7;
+  background-color: #131313;
+  opacity: 1;
+  /* background-image: radial-gradient(#c1c1c1 1.25px, #131313 1.25px); */
+  background-size: 25px 25px;
+}
+.navDark {
+  @apply bg-black text-white;
+}
+/* .dark {
+  @apply bg-slate-900 text-white;
+} */
+
+.btn {
+  @apply inline-block rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-center font-medium text-white hover:bg-indigo-700;
+}
+.btn-del {
+  @apply inline-block rounded-md border border-transparent bg-red-600 px-4 py-2 text-center font-medium text-white hover:bg-red-700;
+}
+.btn-update {
+  @apply inline-block hover:bg-amber-600 bg-amber-500 px-4 py-2 text-center font-medium text-white rounded-md border border-transparent;
+}
+.btn-cart {
+  @apply inline-block rounded-md border border-transparent bg-amber-500 px-4 py-2 text-center font-medium text-white hover:bg-amber-600;
+}
+/* .btn {
+  @apply inline-block rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-center font-medium text-white hover:bg-indigo-700;
+} */
+/* .btn {
+  @apply px-4 py-2 my-2 bg-[#00b58b] text-white rounded-md text-lg;
+} */
+.menu-btn {
+  @apply px-10 py-5  bg-[#00b58b] text-white border-[2px] rounded-md text-lg;
+}
+.menu-btn:hover {
+  @apply px-10 py-5  bg-[#ffffff] text-[#00b58b] rounded-md border-[2px] border-[#00b58b] text-lg;
+}
+/* .glassyEffect {
+  @apply z-10 bg-gray-400  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100;
+} */
+
+.heading {
+  @apply text-xl font-bold text-[#00b58b] text-center py-2 pt-10;
+}
+.subHeading {
+  @apply text-3xl font-bold text-center pb-10 pb-5;
+}
+
+/* className={`glassyEffect ${darkMode && "hover:shadow-2xl hover:shadow-[#000000]"}`} */
