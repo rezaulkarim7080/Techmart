@@ -13,7 +13,7 @@ const Orders = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("https://localhost-5000/api/orders");
+      const { data } = await axios.get("https://techmart-api.vercel.app/api/orders");
       setOrders(data);
     } catch (error) {
       console.log(error);

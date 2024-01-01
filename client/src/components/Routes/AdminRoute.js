@@ -10,7 +10,7 @@ export default function AdminRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("https://localhost-5000/api/admin-auth");
+      const res = await axios.get("https://techmart-api.vercel.app/api/admin-auth");
       if (res.data.ok) {
         setOk(true);
       } else {

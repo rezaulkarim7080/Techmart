@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `https://localhost-5000/api/get-product/${params.slug}`
+        `https://techmart-api.vercel.app/api/get-product/${params.slug}`
       );
       setName(data.product.name);
       setId(data.product._id);
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://localhost-5000/api/get-category");
+      const { data } = await axios.get("https://techmart-api.vercel.app/api/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -65,7 +65,7 @@ const UpdateProduct = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`https://localhost-5000/api/update-product/${id}`, {
+      const res = await axios.put(`https://techmart-api.vercel.app/api/update-product/${id}`, {
         name,
         description,
         price,
@@ -95,7 +95,7 @@ const UpdateProduct = () => {
       // let answer = window.prompt("Are You Sure want to delete this product ? ");
       // if (!answer) return;
       const { data } = await axios.delete(
-        `https://localhost-5000/api/delete-product/${id}`
+        `https://techmart-api.vercel.app/api/delete-product/${id}`
       );
       toast.success("Product DEleted Succfully");
       navigate("/admin-dashboard/products");

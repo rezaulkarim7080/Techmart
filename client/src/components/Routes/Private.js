@@ -10,7 +10,7 @@ export default function PrivateRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("https://localhost-5000/api/user-auth");
+      const res = await axios.get("https://techmart-api.vercel.app/api/user-auth");
       if (res.data.ok) {
         setOk(true);
       } else {

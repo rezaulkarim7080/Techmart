@@ -28,7 +28,7 @@ const CreateCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://localhost-5000/api/create-category", {
+      const { data } = await axios.post("https://techmart-api.vercel.app/api/create-category", {
         name,
       });
       if (data?.success) {
@@ -48,7 +48,7 @@ const CreateCategory = () => {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://localhost-5000/api/get-category");
+      const { data } = await axios.get("https://techmart-api.vercel.app/api/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -68,7 +68,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `https://localhost-5000/api/update-category/${selected._id}`,
+        `https://techmart-api.vercel.app/api/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data?.success) {
@@ -89,7 +89,7 @@ const CreateCategory = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `https://localhost-5000/api/delete-category/${pId}`
+        `https://techmart-api.vercel.app/api/delete-category/${pId}`
       );
       if (data.success) {
         toast.success(`category is deleted`);
