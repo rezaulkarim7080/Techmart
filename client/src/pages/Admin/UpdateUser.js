@@ -23,7 +23,7 @@ const UpdateUser = () => {
     const getSingleProduct = async () => {
         try {
             const { data } = await axios.get(
-                `http://localhost:5000/api/user/${params.id}`
+                `https://techmart-api.vercel.app/api/user/${params.id}`
             );
             setId(data.user._id);
             setName(data.user.name);
@@ -46,7 +46,7 @@ const UpdateUser = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.put(`http://localhost:5000/api/user/${id}`, {
+            const res = await axios.put(`https://techmart-api.vercel.app/api/user/${id}`, {
                 userImage,
                 name,
                 email,
@@ -73,7 +73,7 @@ const UpdateUser = () => {
         try {
 
             const { data } = await axios.delete(
-                `http://localhost:5000/api/user/${id}`
+                `https://techmart-api.vercel.app/api/user/${id}`
             );
             toast.success("user DEleted Succfully");
             navigate("/");

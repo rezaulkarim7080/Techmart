@@ -30,7 +30,7 @@ const Users = () => {
 
   const UserControlller = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/users");
+      const { data } = await axios.get("https://techmart-api.vercel.app/api/users");
       if (data?.success) {
         setUsers(data?.users);
       }
@@ -50,7 +50,7 @@ const Users = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/user/${selected._id}`,
+        `https://techmart-api.vercel.app/api/user/${selected._id}`,
         { name: updatedName, email: updatedEmail, role: updatedRole, userImage: updatedUserImage }
       );
       if (data?.success) {
@@ -74,7 +74,7 @@ const Users = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:5000/api/user/${pId}`
+        `https://techmart-api.vercel.app/api/user/${pId}`
       );
       if (data.success) {
         toast.success(`category is deleted`);

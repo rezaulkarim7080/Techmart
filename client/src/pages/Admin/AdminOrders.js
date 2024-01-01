@@ -19,7 +19,7 @@ const AdminOrders = () => {
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/all-orders");
+      const { data } = await axios.get("https://techmart-api.vercel.app/api/all-orders");
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -32,7 +32,7 @@ const AdminOrders = () => {
 
   const handleChange = async (orderId, value) => {
     try {
-      const { data } = await axios.put(`http://localhost:5000/api/order-status/${orderId}`, {
+      const { data } = await axios.put(`https://techmart-api.vercel.app/api/order-status/${orderId}`, {
         status: value,
       });
       getOrders();

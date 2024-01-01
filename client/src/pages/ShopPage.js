@@ -29,7 +29,7 @@ const ShopPage = () => {
     //getTOtal COunt
     const getTotal = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/api/product-count");
+            const { data } = await axios.get("https://techmart-api.vercel.app/api/product-count");
             setTotal(data?.total);
         } catch (error) {
             console.log(error);
@@ -44,7 +44,7 @@ const ShopPage = () => {
     const loadMore = async () => {
         try {
             setLoading(true);
-            const { data } = await axios.get(`http://localhost:5000/api/product-list/${page}`);
+            const { data } = await axios.get(`https://techmart-api.vercel.app/api/product-list/${page}`);
             setLoading(false);
             setProducts([...products, ...data?.products]);
         } catch (error) {
@@ -61,7 +61,7 @@ const ShopPage = () => {
     //get all cat
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/api/get-category");
+            const { data } = await axios.get("https://techmart-api.vercel.app/api/get-category");
             if (data?.success) {
                 setCategories(data?.category);
             }
@@ -79,8 +79,8 @@ const ShopPage = () => {
     //getall products
     const getAllProducts = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/product-list/${page}`);
-            // const { data } = await axios.get("http://localhost:5000/api/get-product");
+            const { data } = await axios.get(`https://techmart-api.vercel.app/api/product-list/${page}`);
+            // const { data } = await axios.get("https://techmart-api.vercel.app/api/get-product");
             setProducts(data.products);
         } catch (error) {
             console.log(error);
@@ -123,7 +123,7 @@ const ShopPage = () => {
 
     const filterProduct = async () => {
         try {
-            const { data } = await axios.post("http://localhost:5000/api/product-filters", {
+            const { data } = await axios.post("https://techmart-api.vercel.app/api/product-filters", {
                 checked,
                 radio,
             });

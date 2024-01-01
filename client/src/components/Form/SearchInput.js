@@ -10,7 +10,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/search/${values.keyword}`
+        `https://techmart-api.vercel.app/api/search/${values.keyword}`
       );
       setValues({ ...values, results: data });
       navigate("/search");

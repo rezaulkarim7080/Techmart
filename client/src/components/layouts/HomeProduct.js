@@ -25,8 +25,8 @@ const HomeProduct = () => {
     //getall products
     const getAllProducts = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/product-list/${page}`);
-            // const { data } = await axios.get("http://localhost:5000/api/get-product");
+            const { data } = await axios.get(`https://techmart-api.vercel.app/api/product-list/${page}`);
+            // const { data } = await axios.get("https://techmart-api.vercel.app/api/get-product");
             setProducts(data.products);
         } catch (error) {
             console.log(error);

@@ -33,7 +33,7 @@ const Signup = () => {
       } else if (password.length < 5)
         setError("password need minimum 5 character");
       else {
-        const res = await axios.post("http://localhost:5000/api/register", {
+        const res = await axios.post("https://techmart-api.vercel.app/api/register", {
           name,
           email,
           password,
