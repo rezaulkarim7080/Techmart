@@ -1,7 +1,6 @@
 import React from 'react'
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { app } from '../../firebase';
-
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
@@ -19,6 +18,8 @@ const Oauth = () => {
         e.preventDefault();
         try {
             const provider = new GoogleAuthProvider();
+            provider.addScope('profile');
+            provider.addScope('email');
             const auth = getAuth(app);
 
             const result = await signInWithPopup(auth, provider);
