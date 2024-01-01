@@ -302,7 +302,7 @@ export const googleSignIn = async (req, res) => {
     }
 };
 
-//update category
+//update user
 
 
 export const updateUserController = async (req, res) => {
@@ -316,7 +316,7 @@ export const updateUserController = async (req, res) => {
         );
         res.status(200).send({
             success: true,
-            messsage: "Category Updated Successfully",
+            messsage: "user Updated Successfully",
             user,
         });
     } catch (error) {
@@ -324,7 +324,7 @@ export const updateUserController = async (req, res) => {
         res.status(500).send({
             success: false,
             error,
-            message: "Error while updating category",
+            message: "Error while updating user",
         });
     }
 };
@@ -339,7 +339,7 @@ export const UserControlller = async (req, res) => {
         const users = await User.find({});
         res.status(200).send({
             success: true,
-            message: "All Categories List",
+            message: "All user List",
             users,
         });
     } catch (error) {
@@ -347,7 +347,7 @@ export const UserControlller = async (req, res) => {
         res.status(500).send({
             success: false,
             error,
-            message: "Error while getting all categories",
+            message: "Error while getting all user",
         });
     }
 };
@@ -361,7 +361,7 @@ export const singleUserController = async (req, res) => {
         const user = await User.findOne({ slug: req.params.slug });
         res.status(200).send({
             success: true,
-            message: "Get SIngle user SUccessfully",
+            message: "Get Single user SUccessfully",
             user,
         });
     } catch (error) {
