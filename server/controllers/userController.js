@@ -260,47 +260,6 @@ export const orderStatusController = async (req, res) => {
 };
 
 
-// join with google
-
-export const googleSignIn = async (req, res) => {
-    try {
-        const { name, email, userImage } = req.body;
-
-        const existingUser = await User.findOne({ email });
-        if (existingUser) {
-            return res.status(200).send({
-                success: false,
-                message: "Already registered, please login",
-            });
-        }
-
-        const generatedPassword =
-            Math.random().toString(36).slice(-8) +
-            Math.random().toString(36).slice(-8);
-
-        const hashedPassword = await hashPassword(generatedPassword);
-        const user = await new User({
-            name,
-            email,
-            password: hashedPassword,
-            userImage,
-        }).save();
-
-        res.status(201).json({
-            status: "success",
-            success: true,
-            message: "User registered successfully",
-            user,
-        });
-    } catch (error) {
-        console.log(error);
-        res.status(500).send({
-            success: false,
-            message: "Error in registration",
-            error,
-        });
-    }
-};
 
 //update user
 

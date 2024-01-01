@@ -1,6 +1,6 @@
 import express from "express";
 import { isAdmin, isAuthenticatedUser } from "../middleware/auth.js";
-import { UserControlller, deleteUserCOntroller, forgotPassword, getAllOrdersController, getOrdersController, googleSignIn, loginUser, orderStatusController, registerUser, singleUserController, updateProfileController, updateUserController, } from "../controllers/userController.js";
+import { UserControlller, deleteUserCOntroller, forgotPassword, getAllOrdersController, getOrdersController, loginUser, orderStatusController, registerUser, singleUserController, updateProfileController, updateUserController, } from "../controllers/userController.js";
 
 
 
@@ -11,10 +11,7 @@ router.post("/register", registerUser);
 
 router.post("/login", loginUser);
 
-
 router.post("/forgot-password", forgotPassword);
-
-router.post("/google", googleSignIn);
 
 
 // //protected user route auth

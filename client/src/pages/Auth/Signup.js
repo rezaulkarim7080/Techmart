@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdOutlineVisibility } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import Oauth from "../../components/layouts/Oauth";
 import { toast } from "react-toastify";
 import axios from "axios";
 
@@ -150,7 +149,7 @@ const Signup = () => {
                 </button>
               </div>
               <hr className="py-2" />
-              <Oauth />
+
               <div className="flex justify-center items-center py-2">
                 <p className="text-sm text-center">Already have an account?</p>
                 <div className=" text-indigo-600 text-lg font-semibold focus:underline hover:underline">

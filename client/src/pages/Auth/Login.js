@@ -5,7 +5,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Oauth from "../../components/layouts/Oauth";
 import axios from "axios";
 
 const Login = () => {
@@ -140,8 +139,6 @@ const Login = () => {
               </div>
 
 
-
-              {/* <Oauth /> */}
               <div className="flex justify-center items-center">
                 <p className="text-sm text-center">Already have an account?</p>
                 <div className=" text-indigo-600 text-lg font-semibold  focus:underline hover:underline">
