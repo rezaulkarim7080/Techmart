@@ -1,7 +1,4 @@
 
-![Logo](https://techmart-delta.vercel.app/static/media/footer.874b2e3d55a7a9d4ede5.png)
-
-
 # Techmart
 
 Tech Sale Product Based MERN Project
