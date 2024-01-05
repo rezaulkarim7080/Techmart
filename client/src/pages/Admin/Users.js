@@ -36,7 +36,7 @@ const Users = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something wwent wrong in getting catgeory");
+      toast.error("Something wwent wrong in getting user");
     }
   };
 
@@ -77,7 +77,7 @@ const Users = () => {
         `https://techmart-api.vercel.app/api/user/${pId}`
       );
       if (data.success) {
-        toast.success(`category is deleted`);
+        toast.success(`user is deleted`);
 
         UserControlller();
       } else {
